@@ -1,4 +1,4 @@
-"""Coordinator for the etekcity_fitness_scale_ble integration."""
+"""Coordinator for the vitafit_body_fat_scale_ble integration."""
 
 from __future__ import annotations
 
@@ -6,8 +6,8 @@ import asyncio
 import logging
 from collections.abc import Callable
 
-from etekcity_esf551_ble import (
-    EtekcitySmartFitnessScale,
+from vitafit_vt701_ble import (
+    VitafitBodyFatScale,
     ScaleData,
     WeightUnit,
 )
@@ -24,7 +24,7 @@ class ScaleDataUpdateCoordinator:
     and coordinates updates to the Home Assistant entities.
     """
 
-    _client: EtekcitySmartFitnessScale = None
+    _client: VitafitBodyFatScale = None
     _display_unit: WeightUnit = None
 
     def __init__(self, address: str) -> None:
@@ -50,7 +50,7 @@ class ScaleDataUpdateCoordinator:
         """
         Start the coordinator and initialize the scale client.
 
-        This method sets up the EtekcitySmartFitnessScale client and starts
+        This method sets up the VitafitBodyFatScale client and starts
         listening for updates from the scale.
 
         Args:
@@ -65,8 +65,8 @@ class ScaleDataUpdateCoordinator:
             if self._client:
                 _LOGGER.debug("Stopping existing client")
                 await self._client.async_stop()
-            _LOGGER.debug("Initializing new EtekcitySmartFitnessScale client")
-            self._client = EtekcitySmartFitnessScale(
+            _LOGGER.debug("Initializing new VitafitBodyFatScale client")
+            self._client = VitafitBodyFatScale(
                 self.address, update_callback, self._display_unit
             )
             await self._client.async_start()

@@ -1,49 +1,41 @@
-# Etekcity Fitness Scale BLE Integration for Home Assistant
+# Vitafit Body Fat Scale BLE Integration for Home Assistant
 
-This custom integration allows you to connect your Etekcity Bluetooth Low Energy (BLE) fitness scale to Home Assistant. It provides real-time weight measurements directly in your Home Assistant instance, without requiring an internet connection or the VeSync app.
+This custom integration allows you to connect your Vitafit Bluetooth Low Energy (BLE) fitness scale to Home Assistant. It provides real-time weight measurements directly in your Home Assistant instance, without requiring an internet connection or their Vitafit app.
 
 ## Features
 
-- Automatic discovery of Etekcity BLE fitness scales
+- Automatic discovery of Vitafit BLE fitness scales
 - Real-time weight measurements
 - Customizable display units (kg, lb, st)
-- Direct Bluetooth communication (no internet or VeSync app required)
+- Direct Bluetooth communication (no internet or Vitafit app required)
 
 **Note:** Currently, only weight measurement is supported. Future updates may include support for impedance measurements and/or impedance-based body composition estimates.
 
-[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/ronnnnnnn)
+
 
 ## Installation
 
-### HACS (Recommended)
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=ronnnnnnnnnnnnn&repository=etekcity_fitness_scale_ble&category=integration)
-
-1. Ensure that [HACS](https://hacs.xyz/) is installed in your Home Assistant instance.
-2. In the HACS panel, go to "Integrations".
-3. Click the "+" button and search for "Etekcity Fitness Scale BLE".
-4. Click "Install" on the Etekcity Fitness Scale BLE integration.
-5. Restart Home Assistant.
 
 ### Manual Installation
 
-1. Copy the `etekcity_fitness_scale_ble` folder to your Home Assistant's `custom_components` directory.
+1. Copy the `vitafit_body_fat_scale_ble` folder to your Home Assistant's `custom_components` directory.
 2. Restart Home Assistant.
 
 ## Configuration
 
 1. In Home Assistant, go to "Configuration" > "Integrations".
 2. Click the "+" button to add a new integration.
-3. Search for "Etekcity Fitness Scale BLE" and select it.
+3. Search for "Vitafit Body Fat Scale BLE" and select it.
 4. Follow the configuration steps to add your scale.
 
 ## Supported Devices
 
-This integration has been tested with the following Etekcity scale models:
+This integration has been tested with the following Vitafit scale models:
 
-- [ESF-551 (Smart Fitness Scale)](https://etekcity.com/products/smart-fitness-scale-esf551)
+- [Vitafit Body Fat Scale](https://www.amazon.ca/Vitafit-Analyzer-Weighing-Composition-Professional/dp/B09KLH3ZC1)
 
-Other Etekcity BLE fitness scale models may work but have not been tested. If you try it with a different model, please let me know whether it works or not.
+Other Vitafit BLE fitness scale models may work but have not been tested. If you try it with a different model, please let me know whether it works or not.
 
 ## Troubleshooting
 
@@ -67,7 +59,7 @@ scan on
 
 If you find this unofficial project helpful, consider buying me a coffee! Your support helps maintain and improve this integration.
 
-[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/ronnnnnnn)
+
 
 ## License
 
@@ -75,6 +67,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Disclaimer
 
-This integration is not official. It is not endorsed by, directly affiliated with, maintained, authorized, or sponsored by Etekcity, VeSync Co., Ltd., or any of their affiliates or subsidiaries. All product and company names are the registered trademarks of their original owners. The use of any trade name or trademark is for identification and reference purposes only and does not imply any association with the trademark holder of their product brand.
+This integration is not official. It is not endorsed by, directly affiliated with, maintained, authorized, or sponsored by Vitafit, or any of their affiliates or subsidiaries. All product and company names are the registered trademarks of their original owners. The use of any trade name or trademark is for identification and reference purposes only and does not imply any association with the trademark holder of their product brand.
 
 Use this integration at your own risk.

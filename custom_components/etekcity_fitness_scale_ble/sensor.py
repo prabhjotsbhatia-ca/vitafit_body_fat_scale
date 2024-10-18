@@ -1,4 +1,4 @@
-"""Support for Etekcity Fitness Scale BLE sensors."""
+"""Support for Vitafit Body Fat Scale BLE sensors."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ import logging
 from dataclasses import dataclass
 from typing import Any, Self
 
-from etekcity_esf551_ble import WEIGHT_KEY, WeightUnit
+from vitafit_vt701_ble import WEIGHT_KEY, WeightUnit
 from homeassistant import config_entries
 from homeassistant.components.sensor import (
     RestoreSensor,
@@ -118,7 +118,7 @@ class ScaleSensorExtraStoredData(SensorExtraStoredData):
 
 
 class ScaleSensor(RestoreSensor):
-    """Representation of a sensor for the Etekcity scale."""
+    """Representation of a sensor for the Vitafit scale."""
 
     _attr_should_poll = False
     _attr_has_entity_name = True
@@ -154,7 +154,7 @@ class ScaleSensor(RestoreSensor):
         self._attr_device_info = DeviceInfo(
             connections={(CONNECTION_BLUETOOTH, address)},
             name=name,
-            manufacturer="Etekcity",
+            manufacturer="Vitafit",
         )
         self._coordinator = coordinator
 

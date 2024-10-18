@@ -1,4 +1,4 @@
-"""Config flow for etekcity_fitness_scale_ble integration."""
+"""Config flow for vitafit_body_fat_scale_ble integration."""
 
 from __future__ import annotations
 
@@ -100,7 +100,7 @@ class ScaleConfigFlow(ConfigFlow, domain=DOMAIN):
             if discovery_info.advertisement.local_name is None:
                 continue
 
-            if not (discovery_info.advertisement.local_name.startswith("Etekcity")):
+            if not (discovery_info.advertisement.local_name.startswith("Vitafit")):
                 continue
 
             _LOGGER.debug("Found BT Scale")

@@ -1,3 +1,3 @@
-"""Constants for the etekcity_fitness_scale_ble integration."""
+"""Constants for the vitafit_body_fat_scale_ble integration."""
 
-DOMAIN = "etekcity_fitness_scale_ble"
+DOMAIN = "vitafit_body_fat_scale_ble"
